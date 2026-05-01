@@ -10,6 +10,7 @@ import { filter, take } from 'rxjs/operators';
   standalone: true,
   imports: [CommonModule, FormsModule, IonicModule,RouterModule],
   templateUrl: './login.page.html'
+
 })
 export class LoginPage {
   email = '';

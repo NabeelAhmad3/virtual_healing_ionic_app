@@ -1,54 +1,76 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-        <ion-back-button defaultHref="/login"></ion-back-button>
-      </ion-buttons>
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
     <ion-title>Safety Bridge - Register</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">Full Name</ion-label>
-    <ion-input [(ngModel)]="name" type="text"></ion-input>
-  </ion-item>
+<ion-content class="register-content">
+  <div class="bg-overlay"></div>
+  <div class="form-container">
+    <div class="form-card">
 
-  <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="email" type="email"></ion-input>
-  </ion-item>
+      <div class="form-header">
+        <ion-icon name="person-add" style="font-size:48px"></ion-icon>
+        <h2>Create Account</h2>
+        <p>Join Safety Bridge today</p>
+      </div>
 
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input [(ngModel)]="password" type="password"></ion-input>
-  </ion-item>
+      <ion-item class="custom-item">
+        <ion-icon name="person-outline" slot="start" ></ion-icon>
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Phone No</ion-label>
-    <ion-input [(ngModel)]="phone" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Address</ion-label>
-    <ion-input [(ngModel)]="address" type="text"></ion-input>
-  </ion-item>
+      <ion-item class="custom-item">
+        <ion-icon name="mail-outline" slot="start" ></ion-icon>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label>Role</ion-label>
-    <ion-select [(ngModel)]="role">
-      <ion-select-option value="patient">Patient</ion-select-option>
-      <ion-select-option value="doctor">Doctor</ion-select-option>
-      <ion-select-option value="nurse">Nurse</ion-select-option>
-      <ion-select-option value="physiotherapist">Physiotherapist</ion-select-option>
-    </ion-select>
-  </ion-item>
+      <ion-item class="custom-item">
+        <ion-icon name="lock-closed-outline" slot="start" ></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
 
-  <p color="danger" *ngIf="error">{{ error }}</p>
+      <ion-item class="custom-item">
+        <ion-icon name="call-outline" slot="start" ></ion-icon>
+        <ion-label position="floating">Phone No</ion-label>
+        <ion-input [(ngModel)]="phone" type="text"></ion-input>
+      </ion-item>
 
-  <ion-button expand="block" class="ion-margin-top" (click)="register()" [disabled]="loading">
-    {{ loading ? 'Registering...' : 'Register' }}
-  </ion-button>
+      <ion-item class="custom-item">
+        <ion-icon name="home-outline" slot="start" ></ion-icon>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input [(ngModel)]="address" type="text"></ion-input>
+      </ion-item>
 
-  <ion-button expand="block" fill="clear" routerLink="/login">
-    Already have an account? Login
-  </ion-button>
+      <ion-item class="custom-item">
+        <ion-icon name="medical-outline" slot="start" ></ion-icon>
+        <ion-label>Role</ion-label>
+        <ion-select [(ngModel)]="role">
+          <ion-select-option value="patient">Patient</ion-select-option>
+          <ion-select-option value="doctor">Doctor</ion-select-option>
+          <ion-select-option value="nurse">Nurse</ion-select-option>
+          <ion-select-option value="physiotherapist">Physiotherapist</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <p style="color:red; padding: 0 16px" *ngIf="error">{{ error }}</p>
+
+      <ion-button expand="block" class="ion-margin-top register-btn" (click)="register()" [disabled]="loading">
+        <ion-spinner *ngIf="loading" name="crescent" slot="start"></ion-spinner>
+        {{ loading ? 'Registering...' : 'Register' }}
+      </ion-button>
+
+      <ion-button expand="block" fill="clear" routerLink="/login">
+        Already have an account? Login
+      </ion-button>
+
+    </div>
+  </div>
+
 </ion-content>

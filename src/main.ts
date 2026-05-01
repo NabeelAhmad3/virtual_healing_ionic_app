@@ -27,8 +27,9 @@ import {
   mailOutline,
   personOutline,
   homeOutline,
-  call,
-  callOutline
+  callOutline,
+  lockClosedOutline,
+  medicalOutline
 } from 'ionicons/icons';
 
 bootstrapApplication(AppComponent, {
@@ -66,5 +67,7 @@ addIcons({
   'mail-outline': mailOutline,
   'person-outline': personOutline,
   'home-outline': homeOutline,
-  'call-outline': callOutline
+  'call-outline': callOutline,
+  'lock-closed-outline': lockClosedOutline,
+  'medical-outline':medicalOutline
 });

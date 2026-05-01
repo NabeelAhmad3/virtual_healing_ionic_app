@@ -1,37 +1,168 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
+//Defaul css for ionic app
 @import "@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
 @import "@ionic/angular/css/display.css";
-
-/* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+// Custom css
+
+.login-content,
+.register-content {
+  --background: transparent;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Background Image */
+.login-content::before,
+.register-content::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('/assets/images/medical-bg.png') center center / cover no-repeat;
+  z-index: 0;
+}
+
+/* Dark Glass Overlay */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* ---------- FORM CENTER ---------- */
+.form-container {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ---------- CARD ---------- */
+.form-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 24px 18px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- HEADER ---------- */
+.form-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.form-header ion-icon {
+  font-size: 48px;
+}
+
+.form-header h2 {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+
+.form-header p {
+  color: #e6e6e6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ---------- INPUT FIELDS ---------- */
+.custom-item {
+  --background: rgba(255, 255, 255, 0.12);
+  --border-radius: 12px;
+  --padding-start: 10px;
+  --inner-padding-end: 10px;
+
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* Text inside item */
+.custom-item ion-label,
+.custom-item ion-input,
+.custom-item ion-icon,
+.custom-item ion-select,
+.custom-item ion-select-option {
+  color: white !important;
+}
+
+/* ---------- BUTTONS ---------- */
+.login-btn,
+.register-btn {
+  margin-top: 18px;
+  height: 48px;
+  --border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Register Button Extra Glow */
+.register-btn {
+  --box-shadow: 0 8px 20px rgba(56, 128, 255, 0.35);
+}
+
+/* Clear Buttons */
+ion-button[fill="clear"] {
+  color: white;
+  margin-top: 6px;
+}
+
+/* ---------- ERROR TEXT ---------- */
+.error-text,
+.error-message {
+  color: #ff4d4d;
+  font-size: 13px;
+  padding-left: 4px;
+  margin-top: 5px;
+}
+
+/* ---------- TOOLBAR ---------- */
+ion-toolbar {
+  --color: white;
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+ion-back-button {
+  --color: white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 20px 14px;
+    border-radius: 18px;
+  }
+
+  .form-header h2 {
+    font-size: 22px;
+  }
+
+  .login-btn,
+  .register-btn {
+    height: 46px;
+    font-size: 15px;
+  }
+}

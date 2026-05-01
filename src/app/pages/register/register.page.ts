@@ -17,7 +17,7 @@ export class RegisterPage {
   password = '';
   address = '';
   phone = '';
-  role = 'patient';
+  role = '';
   loading = false;
   error = '';
 
