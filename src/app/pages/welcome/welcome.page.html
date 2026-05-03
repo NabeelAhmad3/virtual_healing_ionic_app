@@ -45,35 +45,34 @@
     <h2 class="section-title">Quick Links</h2>
     <div class="links-grid">
 
-      <div class="link-card" routerLink="/login">
-        <ion-icon name="log-in-outline" color="primary"></ion-icon>
-        <span>Login</span>
-      </div>
-
-      <div class="link-card" routerLink="/register">
-        <ion-icon name="person-add-outline" color="success"></ion-icon>
-        <span>Register</span>
-      </div>
-
-      <!-- ✅ These require login so point to login with message -->
       <div class="link-card" (click)="goToProtected('/doctors')">
-        <ion-icon name="medkit" color="tertiary"></ion-icon>
-        <span>Doctors</span>
+        <ion-icon name="medkit" color="primary"></ion-icon>
+        <span>Specialists</span>
       </div>
 
-      <div class="link-card" (click)="goToProtected('/doctors')">
-        <ion-icon name="heart-circle" color="danger"></ion-icon>
-        <span>Nurses</span>
+      <div class="link-card" (click)="goToProtected('/lab')">
+        <ion-icon name="flask" color="success"></ion-icon>
+        <span>Lab Tests</span>
       </div>
 
-      <div class="link-card" (click)="goToProtected('/doctors')">
-        <ion-icon name="fitness" color="secondary"></ion-icon>
-        <span>Physio</span>
+      <div class="link-card" (click)="goToProtected('/medical-records')">
+        <ion-icon name="document-text" color="tertiary"></ion-icon>
+        <span>Medical Records</span>
       </div>
 
       <div class="link-card" (click)="goToProtected('/appointments')">
-        <ion-icon name="calendar" color="warning"></ion-icon>
-        <span>Book Appt</span>
+        <ion-icon name="calendar" color="danger"></ion-icon>
+        <span>Easy Booking</span>
+      </div>
+
+      <div class="link-card" (click)="goToProtected('/medicine')">
+        <ion-icon name="medkit" color="secondary"></ion-icon>
+        <span>Medicine Delivery</span>
+      </div>
+
+      <div class="link-card" (click)="goToProtected('/appointments')">
+        <ion-icon name="chatbubble-ellipses" color="warning"></ion-icon>
+        <span>Virtual Assistance</span>
       </div>
 
     </div>

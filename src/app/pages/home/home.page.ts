@@ -47,11 +47,10 @@ export class HomePage implements OnInit, AfterViewInit, OnDestroy {
     { title: 'Find Specialists', icon: 'medical', route: '/doctors', color: 'primary', roles: ['patient'] },
     { title: 'Book Lab Test', icon: 'flask', route: '/lab', color: 'tertiary', roles: ['patient'] },
     { title: 'Order Medicine', icon: 'medkit', route: '/medicine', color: 'success', roles: ['patient'] },
-    { title: 'Medical Records', icon: 'document-text', route: '/medical-records', color: 'secondary', roles: ['doctor', 'physiotherapist', 'nurse', 'patient'] },
+    { title: 'Medical Records', icon: 'document-text', route: '/medical-records', color: 'warning', roles: ['doctor', 'physiotherapist', 'nurse', 'patient'] },
     { title: 'My Appointments', icon: 'calendar', route: '/appointments', color: 'success', roles: ['patient', 'doctor', 'physiotherapist', 'nurse'] },
     { title: 'Lab Requests', icon: 'flask', route: '/lab', color: 'tertiary', roles: ['laboratory'] },
-    { title: 'Medicine Orders', icon: 'medkit', route: '/medicine', color: 'success', roles: ['pharmacy'] },
-    { title: 'My Profile', icon: 'person-circle', route: '/profile', color: 'warning', roles: ['patient', 'doctor', 'physiotherapist', 'nurse', 'laboratory', 'pharmacy'] },
+    { title: 'Medicine Orders', icon: 'medkit', route: '/medicine', color: 'success', roles: ['pharmacy'] }
   ];
 
   healthTips = [

@@ -11,7 +11,7 @@
 
 <ion-content>
 
-  <!-- ═══════════════════ WELCOME BANNER ═══════════════════ -->
+  
   <div class="welcome-banner">
     <div class="welcome-text">
       <h2>Hello, {{ profile?.name?.split(' ')[0] || 'User' }} 👋</h2>
@@ -25,7 +25,7 @@
     </ion-icon>
   </div>
 
-  <!-- ═══════════════════ SEARCH (patient only) ═══════════════════ -->
+  
   <div class="ion-padding-horizontal ion-padding-top" *ngIf="profile?.role === 'patient'">
     <ion-searchbar
       [(ngModel)]="searchQuery"
@@ -37,7 +37,7 @@
     </ion-searchbar>
   </div>
 
-  <!-- ═══════════════════ SEARCH RESULTS ═══════════════════ -->
+  
   <div class="ion-padding-horizontal" *ngIf="isSearching">
     <div *ngIf="filteredSpecialists.length === 0" style="text-align:center; padding:20px">
       <ion-icon name="search-outline" style="font-size:40px; color:#ccc"></ion-icon>
@@ -58,7 +58,7 @@
     </ion-card>
   </div>
 
-  <!-- ═══════════════════ STATS: LABORATORY ═══════════════════ -->
+  
   <div class="stats-row ion-padding-horizontal"
     *ngIf="!isSearching && profile?.role === 'laboratory'">
     <div class="stat-card pending">
@@ -78,7 +78,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ STATS: PHARMACY ═══════════════════ -->
+  
   <div class="stats-row ion-padding-horizontal"
     *ngIf="!isSearching && profile?.role === 'pharmacy'">
     <div class="stat-card pending">
@@ -93,7 +93,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ STATS: EVERYONE ELSE ═══════════════════ -->
+  
   <div class="stats-row ion-padding-horizontal"
     *ngIf="!isSearching && profile?.role !== 'laboratory' && profile?.role !== 'pharmacy'">
     <div class="stat-card pending">
@@ -113,7 +113,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ QUICK ACTIONS ═══════════════════ -->
+  
   <div *ngIf="!isSearching">
     <div class="section-title ion-padding-horizontal">Quick Actions</div>
     <div class="quick-actions ion-padding-horizontal">
@@ -126,7 +126,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ RECENT: LABORATORY ═══════════════════ -->
+  
   <div *ngIf="!isSearching && profile?.role === 'laboratory'">
     <div class="section-title ion-padding-horizontal">Recent Lab Requests</div>
 
@@ -160,7 +160,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ RECENT: PHARMACY ═══════════════════ -->
+  
   <div *ngIf="!isSearching && profile?.role === 'pharmacy'">
     <div class="section-title ion-padding-horizontal">Recent Medicine Orders</div>
 
@@ -195,7 +195,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ RECENT: APPOINTMENTS (doctors/nurses/physio/patient) ═══════════════════ -->
+  
   <div *ngIf="!isSearching && profile?.role !== 'laboratory' && profile?.role !== 'pharmacy'">
     <div class="section-title ion-padding-horizontal">Recent Appointments</div>
 
@@ -237,7 +237,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ PATIENT: MY LAB TESTS ═══════════════════ -->
+  
   <div *ngIf="!isSearching && profile?.role === 'patient'">
     <div class="section-title ion-padding-horizontal">
       My Lab Tests
@@ -281,7 +281,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ PATIENT: MY MEDICINE ORDERS ═══════════════════ -->
+  
   <div *ngIf="!isSearching && profile?.role === 'patient'">
     <div class="section-title ion-padding-horizontal">
       My Medicine Orders
@@ -325,7 +325,7 @@
     </div>
   </div>
 
-  <!-- ═══════════════════ HEALTH TIPS ═══════════════════ -->
+  
   <div *ngIf="!isSearching">
     <div class="section-title ion-padding-horizontal">Health Tips</div>
     <div class="tips-scroll ion-padding-horizontal" #tipsContainer>

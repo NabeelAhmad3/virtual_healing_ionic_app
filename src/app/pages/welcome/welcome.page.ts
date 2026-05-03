@@ -18,26 +18,38 @@ export class WelcomePage {
     {
       icon: 'medkit',
       color: 'primary',
-      title: 'Expert Doctors',
-      desc: 'Connect with qualified doctors instantly'
+      title: 'Expert Specialists',
+      desc: 'Connect with qualified doctors, nurses and physiotherapists instantly'
     },
     {
-      icon: 'heart-circle',
-      color: 'danger',
-      title: 'Skilled Nurses',
-      desc: 'Professional nursing care at your service'
+      icon: 'flask',
+      color: 'tertiary',
+      title: 'Lab Tests',
+      desc: 'Book professional lab tests and receive results online'
     },
     {
-      icon: 'fitness',
+      icon: 'document-text',
       color: 'success',
-      title: 'Physiotherapy',
-      desc: 'Specialized physical therapy sessions'
+      title: 'Health Records',
+      desc: 'Access your complete medical history anytime, anywhere'
     },
     {
       icon: 'calendar',
       color: 'warning',
       title: 'Easy Booking',
-      desc: 'Book appointments in seconds'
+      desc: 'Schedule appointments with specialists in just a few taps'
+    },
+    {
+      icon: 'medkit',
+      color: 'danger',
+      title: 'Medicine Delivery',
+      desc: 'Order prescribed medicines and track your deliveries'
+    },
+    {
+      icon: 'chatbubble-ellipses',
+      color: 'secondary',
+      title: 'Virtual Assistance',
+        desc: 'Chat directly with your doctor or specialist in real time'
     },
   ];
 

@@ -47,7 +47,8 @@ import {
   createOutline,
   documentText,
   documentTextOutline,
-  eyeOutline
+  eyeOutline,
+  chatbubbleEllipses
 } from 'ionicons/icons';
 
 bootstrapApplication(AppComponent, {
@@ -105,5 +106,6 @@ addIcons({
   'create-outline':createOutline,
   'document-text':documentText,
   'document-text-outline':documentTextOutline,
-  'eye-outline':eyeOutline
+  'eye-outline':eyeOutline,
+  'chatbubble-ellipses':chatbubbleEllipses
 });
