@@ -1,5 +1,7 @@
 {
   "name": "safety-bridge",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
